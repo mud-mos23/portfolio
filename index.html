@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amos Mude | Portfolio</title>
+  <title>Amos Bachigale | Portfolio</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -45,7 +45,7 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 56px;
     }
-    nav .logo { font-weight: 700; font-size: 18px; color: var(--accent); }
+    nav .logo { font-weight: 700; font-size: 18px; color: var(--accent); text-decoration: none; }
     nav .links { display: flex; gap: 24px; }
     nav .links a {
       color: var(--text2); text-decoration: none; font-size: 14px;
@@ -88,6 +88,7 @@
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .about-text p { color: var(--text2); font-size: 15px; margin-bottom: 16px; }
     .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
     .stat-card {
       background: var(--surface); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 20px; text-align: center;
@@ -127,6 +128,24 @@
     }
     .project-links a:hover { color: var(--accent); }
 
+    /* BLOG */
+    .blog-grid { display: grid; gap: 20px; }
+    .blog-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      text-decoration: none; color: inherit;
+      display: block; transition: all 0.2s;
+    }
+    .blog-card:hover { border-color: var(--accent); }
+    .blog-card .date { font-size: 12px; color: var(--text3); margin-bottom: 8px; }
+    .blog-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    .blog-card p { color: var(--text2); font-size: 14px; line-height: 1.5; }
+    .blog-card .read-more {
+      display: inline-flex; align-items: center; gap: 4px;
+      color: var(--accent); font-size: 13px; font-weight: 500;
+      margin-top: 12px;
+    }
+
     /* CONTACT */
     .contact-links {
       display: flex; gap: 24px; flex-wrap: wrap;
@@ -165,12 +184,13 @@
 <body>
   <nav>
     <div class="container">
-      <span class="logo">AM</span>
+      <a href="/portfolio/" class="logo">AB</a>
       <div class="links">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="/portfolio/#about">About</a>
+        <a href="/portfolio/#skills">Skills</a>
+        <a href="/portfolio/#projects">Projects</a>
+        <a href="/portfolio/blog/">Blog</a>
+        <a href="/portfolio/#contact">Contact</a>
       </div>
     </div>
   </nav>
@@ -179,11 +199,11 @@
     <div class="container">
       <div class="hero-content">
         <div class="hero-greeting">Hello, I'm</div>
-        <h1>Amos <span>Mude</span></h1>
-        <p>Full-stack developer building real products — from real-time WebSockets in PHP to cross-platform apps in React Native.</p>
+        <h1>Amos <span>Bachigale</span></h1>
+        <p>Full-stack developer building real products — from real-time WebSockets in PHP to cross-platform apps in React Native. I write about code, design, and building things that matter.</p>
         <div class="hero-cta">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          <a href="/portfolio/#projects" class="btn btn-primary">View Projects</a>
+          <a href="/portfolio/blog/" class="btn btn-outline">Read Blog</a>
         </div>
       </div>
     </div>
@@ -197,7 +217,7 @@
         <div class="about-text">
           <p>I'm a developer focused on building functional, well-designed applications — from real-time dashboards with Flask to WebSocket packages in PHP, and cross-platform music players with React Native.</p>
           <p>I enjoy working across the full stack, picking the right tool for each problem. My recent projects include a music streaming app powered by YouTube Music, a data analysis platform, and a modern design tool for AI-generated interfaces.</p>
-          <p>Currently exploring real-time systems and mobile development with React Native.</p>
+          <p>I also write about my journey as a developer — lessons learned, side projects, and thoughts on building better software.</p>
         </div>
         <div class="about-stats">
           <div class="stat-card">
@@ -313,6 +333,19 @@
     </div>
   </section>
 
+  <section id="blog">
+    <div class="container">
+      <div class="section-label">Blog</div>
+      <h2 class="section-title">Latest posts</h2>
+      <div class="blog-grid" id="blog-posts">
+        <p style="color:var(--text3);font-size:14px;">Loading posts...</p>
+      </div>
+      <div style="margin-top:32px;text-align:center;">
+        <a href="/portfolio/blog/" class="btn btn-outline">View all posts</a>
+      </div>
+    </div>
+  </section>
+
   <section id="contact">
     <div class="container">
       <div class="section-label">Contact</div>
@@ -322,9 +355,9 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
           mud-mos23
         </a>
-        <a href="https://github.com/mud-mos23" target="_blank">
+        <a href="mailto:amosmude6@gmail.com">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          amos@example.com
+          amosmude6@gmail.com
         </a>
       </div>
     </div>
@@ -332,9 +365,31 @@
 
   <footer>
     <div class="container">
-      <span>&copy; 2026 Amos Mude</span>
-      <a href="#home">Back to top</a>
+      <span>&copy; 2026 Amos Bachigale</span>
+      <a href="/portfolio/#home">Back to top</a>
     </div>
   </footer>
+
+  <script>
+    fetch('/portfolio/blog/index.json')
+      .then(r => r.json())
+      .then(posts => {
+        const container = document.getElementById('blog-posts');
+        container.innerHTML = posts.slice(0, 3).map(post => `
+          <a href="/portfolio/blog/${post.slug}/" class="blog-card">
+            <div class="date">${post.date}</div>
+            <h3>${post.title}</h3>
+            <p>${post.excerpt}</p>
+            <span class="read-more">
+              Read more
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+        `).join('');
+      })
+      .catch(() => {
+        document.getElementById('blog-posts').innerHTML = '<p style="color:var(--text3);font-size:14px;">No posts yet — check back soon.</p>';
+      });
+  </script>
 </body>
 </html>

@@ -1,0 +1,8 @@
+[
+  {
+    "title": "Building MusicPliz — A YouTube Music Player for the Web",
+    "slug": "building-musicpliz-a-youtube-music-player-for-the-web",
+    "date": "2026-07-07",
+    "excerpt": "How I built a web-based YouTube Music player with React Native, a Spotify-inspired UI, and yt-dlp audio streaming."
+  }
+]
