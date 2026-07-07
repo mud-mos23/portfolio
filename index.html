@@ -9,15 +9,15 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --bg: #0a0a0a;
-      --surface: #111;
-      --surface2: #1a1a1a;
-      --border: #222;
+      --bg: #ffffff;
+      --surface: #f5f5f5;
+      --surface2: #eeeeee;
+      --border: #e0e0e0;
       --accent: #1DB954;
-      --accent-dim: rgba(29, 185, 84, 0.1);
-      --text: #f5f5f5;
-      --text2: #a0a0a0;
-      --text3: #666;
+      --accent-dim: rgba(29, 185, 84, 0.08);
+      --text: #111111;
+      --text2: #555555;
+      --text3: #999999;
       --radius: 12px;
       --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
@@ -36,7 +36,7 @@
     /* NAV */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      background: rgba(10, 10, 10, 0.85);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
@@ -113,7 +113,7 @@
       border-radius: var(--radius); padding: 28px;
       transition: all 0.2s;
     }
-    .project-card:hover { border-color: #333; }
+    .project-card:hover { border-color: var(--accent); }
     .project-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
     .project-card p { color: var(--text2); font-size: 14px; margin-bottom: 16px; }
     .project-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
