@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amos Mude | Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111;
+      --surface2: #1a1a1a;
+      --border: #222;
+      --accent: #1DB954;
+      --accent-dim: rgba(29, 185, 84, 0.1);
+      --text: #f5f5f5;
+      --text2: #a0a0a0;
+      --text3: #666;
+      --radius: 12px;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px;
+    }
+    nav .logo { font-weight: 700; font-size: 18px; color: var(--accent); }
+    nav .links { display: flex; gap: 24px; }
+    nav .links a {
+      color: var(--text2); text-decoration: none; font-size: 14px;
+      transition: color 0.2s;
+    }
+    nav .links a:hover { color: var(--text); }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      padding-top: 56px;
+    }
+    .hero-content { max-width: 640px; }
+    .hero-greeting { color: var(--accent); font-size: 14px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+    .hero h1 { font-size: clamp(36px, 6vw, 64px); font-weight: 800; line-height: 1.1; margin-bottom: 20px; letter-spacing: -1.5px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--text2); font-size: 18px; max-width: 520px; margin-bottom: 32px; }
+    .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 28px; border-radius: 50px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .btn-primary { background: var(--accent); color: #000; }
+    .btn-primary:hover { background: #1ed760; transform: translateY(-1px); }
+    .btn-outline { border: 1px solid var(--border); color: var(--text); }
+    .btn-outline:hover { border-color: var(--text2); background: var(--surface); }
+
+    /* SECTIONS */
+    section { padding: 100px 0; }
+    .section-label {
+      color: var(--accent); font-size: 12px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
+    }
+    .section-title { font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 48px; letter-spacing: -0.5px; }
+
+    /* ABOUT */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .about-text p { color: var(--text2); font-size: 15px; margin-bottom: 16px; }
+    .about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .stat-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px; text-align: center;
+    }
+    .stat-card .num { font-size: 28px; font-weight: 700; color: var(--accent); }
+    .stat-card .label { font-size: 12px; color: var(--text3); margin-top: 4px; }
+
+    /* SKILLS */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px; }
+    .skill-chip {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 50px; padding: 10px 20px;
+      font-size: 14px; color: var(--text2); text-align: center;
+      transition: all 0.2s;
+    }
+    .skill-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    /* PROJECTS */
+    .projects-grid { display: grid; gap: 20px; }
+    .project-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+      transition: all 0.2s;
+    }
+    .project-card:hover { border-color: #333; }
+    .project-card h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+    .project-card p { color: var(--text2); font-size: 14px; margin-bottom: 16px; }
+    .project-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
+    .project-meta span {
+      font-size: 11px; color: var(--text3); font-weight: 500;
+      background: var(--surface2); padding: 4px 10px; border-radius: 50px;
+    }
+    .project-links { display: flex; gap: 12px; }
+    .project-links a {
+      color: var(--text2); text-decoration: none; font-size: 13px; font-weight: 500;
+      display: inline-flex; align-items: center; gap: 4px; transition: color 0.2s;
+    }
+    .project-links a:hover { color: var(--accent); }
+
+    /* CONTACT */
+    .contact-links {
+      display: flex; gap: 24px; flex-wrap: wrap;
+    }
+    .contact-links a {
+      display: flex; align-items: center; gap: 8px;
+      color: var(--text2); text-decoration: none;
+      font-size: 15px; transition: color 0.2s;
+    }
+    .contact-links a:hover { color: var(--accent); }
+
+    /* FOOTER */
+    footer { border-top: 1px solid var(--border); padding: 24px 0; }
+    footer .container {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px; color: var(--text3);
+    }
+    footer a { color: var(--text2); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .about-stats { grid-template-columns: repeat(3, 1fr); }
+      nav .links { gap: 16px; }
+      .hero { padding-top: 80px; }
+      section { padding: 60px 0; }
+    }
+    @media (max-width: 480px) {
+      .about-stats { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-links { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <span class="logo">AM</span>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-greeting">Hello, I'm</div>
+        <h1>Amos <span>Mude</span></h1>
+        <p>Full-stack developer building real products — from real-time WebSockets in PHP to cross-platform apps in React Native.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-label">About</div>
+      <h2 class="section-title">Who I am</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a developer focused on building functional, well-designed applications — from real-time dashboards with Flask to WebSocket packages in PHP, and cross-platform music players with React Native.</p>
+          <p>I enjoy working across the full stack, picking the right tool for each problem. My recent projects include a music streaming app powered by YouTube Music, a data analysis platform, and a modern design tool for AI-generated interfaces.</p>
+          <p>Currently exploring real-time systems and mobile development with React Native.</p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="num">6</div>
+            <div class="label">Public Repos</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">2</div>
+            <div class="label">Followers</div>
+          </div>
+          <div class="stat-card">
+            <div class="num">2020</div>
+            <div class="label">On GitHub Since</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">What I use</h2>
+      <div class="skills-grid">
+        <div class="skill-chip">TypeScript</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">React Native</div>
+        <div class="skill-chip">Python</div>
+        <div class="skill-chip">PHP</div>
+        <div class="skill-chip">Flask</div>
+        <div class="skill-chip">React</div>
+        <div class="skill-chip">Node.js</div>
+        <div class="skill-chip">WebSockets</div>
+        <div class="skill-chip">HTML/CSS</div>
+        <div class="skill-chip">Expo</div>
+        <div class="skill-chip">Git</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>MusicPliz</h3>
+          <p>A React Native music player for the web with real YouTube Music streaming. Features a Spotify-inspired UI, search, library management, and audio playback via yt-dlp integration.</p>
+          <div class="project-meta">
+            <span>TypeScript</span>
+            <span>React Native</span>
+            <span>YouTube API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/musicpliz" target="_blank">Source</a>
+            <a href="https://mud-mos23.github.io/musicpliz" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Nstup Taste</h3>
+          <p>An anti-slop design system for AI-generated interfaces. No generic SaaS templates, no purple-blue gradients, no 3-column card layouts. Opinionated, tasteful defaults for real design.</p>
+          <div class="project-meta">
+            <span>Shell</span>
+            <span>Design System</span>
+            <span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/nstup-taste" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Agency Balthazar</h3>
+          <p>A money transfer management application built for Ets Balthazar agency. Handles transaction tracking, client management, and reporting.</p>
+          <div class="project-meta">
+            <span>HTML</span>
+            <span>JavaScript</span>
+            <span>Finance</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/agencyBalth" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Analyzer</h3>
+          <p>A statistical analysis web application built with Flask (Python). Provides data visualization and analytical tools through a clean web interface. Deployed on Render.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/Data-Analyzer" target="_blank">Source</a>
+            <a href="https://data-analyzer-lzo7.onrender.com/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Real-Time PHP</h3>
+          <p>A PHP package for building real-time applications with WebSockets. Enables bidirectional communication and live updates in PHP-based projects.</p>
+          <div class="project-meta">
+            <span>PHP</span>
+            <span>WebSockets</span>
+            <span>Composer</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/real-time-php" target="_blank">Source</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Get in touch</h2>
+      <div class="contact-links">
+        <a href="https://github.com/mud-mos23" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          mud-mos23
+        </a>
+        <a href="https://github.com/mud-mos23" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          amos@example.com
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>&copy; 2026 Amos Mude</span>
+      <a href="#home">Back to top</a>
+    </div>
+  </footer>
+</body>
+</html>
