@@ -84,6 +84,12 @@
     "excerpt": "PostgreSQL is the default choice for ERP. But SQLite deserves a closer look, especially for small and medium businesses."
   },
   {
+    "title": "Portfolio Redesign 2026 — Full Visual Tour",
+    "slug": "portfolio-redesign-2026-full-visual-tour",
+    "date": "2026-07-08",
+    "excerpt": "A complete visual tour of my redesigned portfolio: hero section, blog system, projects showcase, and what I learned building it."
+  },
+  {
     "title": "The Problem with Modern Design Tools (And Why I Built Nstup Taste)",
     "slug": "the-problem-with-modern-design-tools-and-why-i-built-nstup-t",
     "date": "2026-07-08",
