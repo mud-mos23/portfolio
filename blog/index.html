@@ -13,20 +13,24 @@
       --text: #111111; --text2: #555555; --text3: #999999;
       --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; height: 100%; }
     body {
       font-family: var(--font); background: var(--bg); color: var(--text);
       line-height: 1.6; -webkit-font-smoothing: antialiased;
+      min-height: 100%; display: flex; flex-direction: column;
     }
     .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 
+    /* NAV */
     nav {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 24px 0 48px;
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
     nav a { color: var(--text2); text-decoration: none; font-size: 14px; transition: color 0.2s; }
     nav a:hover { color: var(--text); }
-    nav .logo { font-weight: 700; color: var(--accent); }
 
     h1 { font-size: 36px; font-weight: 800; margin-bottom: 8px; letter-spacing: -1px; }
     .subtitle { color: var(--text2); font-size: 16px; margin-bottom: 48px; }
@@ -47,6 +51,7 @@
     footer {
       border-top: 1px solid var(--border); padding: 24px 0;
       text-align: center; font-size: 13px; color: var(--text3);
+      margin-top: auto;
     }
     footer a { color: var(--text2); text-decoration: none; }
     footer a:hover { color: var(--text); }
@@ -54,29 +59,30 @@
 </head>
 <body>
   <nav>
-    <div class="container" style="display:flex;align-items:center;justify-content:space-between;height:56px;">
-      <a href="/portfolio/" class="logo" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:18px;color:var(--accent);text-decoration:none;">
+    <div class="wide-container" style="max-width:960px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:56px;">
+      <a href="/portfolio/" style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:18px;color:var(--accent);text-decoration:none;">
         <img src="/portfolio/assets/photo-32.png" alt="" style="width:28px;height:28px;border-radius:50%;border:2px solid var(--accent);object-fit:cover;">
         Amos B.
       </a>
-      <div class="links" style="display:flex;gap:24px;">
-        <a href="/portfolio/about/" style="color:var(--text2);text-decoration:none;font-size:14px;transition:color 0.2s;">About</a>
-        <a href="/portfolio/skills/" style="color:var(--text2);text-decoration:none;font-size:14px;transition:color 0.2s;">Skills</a>
-        <a href="/portfolio/projects/" style="color:var(--text2);text-decoration:none;font-size:14px;transition:color 0.2s;">Projects</a>
-        <a href="/portfolio/blog/" style="color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;transition:color 0.2s;">Blog</a>
-        <a href="/portfolio/#contact" style="color:var(--text2);text-decoration:none;font-size:14px;transition:color 0.2s;">Contact</a>
+      <div style="display:flex;gap:24px;">
+        <a href="/portfolio/about/" style="color:var(--text2);text-decoration:none;font-size:14px;">About</a>
+        <a href="/portfolio/skills/" style="color:var(--text2);text-decoration:none;font-size:14px;">Skills</a>
+        <a href="/portfolio/projects/" style="color:var(--text2);text-decoration:none;font-size:14px;">Projects</a>
+        <a href="/portfolio/blog/" style="color:var(--accent);text-decoration:none;font-size:14px;font-weight:600;">Blog</a>
+        <a href="/portfolio/#contact" style="color:var(--text2);text-decoration:none;font-size:14px;">Contact</a>
       </div>
     </div>
   </nav>
-  <div class="container" style="padding-top:80px;">
+  <div class="container" style="padding-top:100px;">
     <h1>Blog</h1>
     <p class="subtitle">Thoughts on code, design, and building things.</p>
     <div class="posts" id="posts">
       <p class="empty">Loading...</p>
     </div>
-    <footer>
-      &copy; 2026 Amos Bachigale
-    </footer>
+  </div>
+  <footer>
+    &copy; 2026 Amos Bachigale
+  </footer>
   </div>
   <script>
     fetch('/portfolio/blog/index.json')
