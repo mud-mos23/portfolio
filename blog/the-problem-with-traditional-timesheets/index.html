@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Problem with Traditional Timesheets · Amos Bachigale</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
+      --accent: #1DB954; --accent-dim: rgba(29,185,84,0.08);
+      --text: #111111; --text2: #555555; --text3: #999999;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font); background: var(--bg); color: var(--text);
+      line-height: 1.7; -webkit-font-smoothing: antialiased; padding: 0;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      padding: 24px 0 48px;
+    }
+    nav a {
+      color: var(--text2); text-decoration: none; font-size: 14px;
+      display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+
+    article { padding-bottom: 80px; }
+    article h1 { font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.5px; }
+    article .meta { color: var(--text3); font-size: 13px; margin-bottom: 48px; }
+    article h2 { font-size: 22px; font-weight: 700; margin: 40px 0 16px; }
+    article h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+    article p { color: var(--text2); font-size: 16px; margin-bottom: 20px; }
+    article a { color: var(--accent); }
+    article blockquote {
+      border-left: 3px solid var(--accent); padding: 12px 20px;
+      margin: 24px 0; background: var(--accent-dim); border-radius: 4px;
+      color: var(--text2); font-style: italic;
+    }
+    article ul, article ol { margin: 16px 0 24px; padding-left: 24px; color: var(--text2); }
+    article li { margin-bottom: 8px; }
+    article pre {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px; overflow-x: auto;
+      margin: 24px 0; font-size: 14px; line-height: 1.5;
+    }
+    article code { font-family: 'SF Mono', Monaco, monospace; }
+    article :not(pre) > code {
+      background: var(--accent-dim); color: var(--accent);
+      padding: 2px 8px; border-radius: 4px; font-size: 14px;
+    }
+    article hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 24px 0;
+      text-align: center; font-size: 13px; color: var(--text3);
+    }
+    footer a { color: var(--text2); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      article h1 { font-size: 26px; }
+      nav { padding: 16px 0 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/portfolio/blog/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to blog
+      </a>
+    </nav>
+    <article>
+      <h1>The Problem with Traditional Timesheets</h1>
+      <div class="meta">2026-07-08</div>
+      <p>I built the timesheet system in <a href="https://github.com/mud-mos23/bubely-erp" target="_blank">Bubely ERP</a>. The challenge: everyone hates filling out timesheets.</p>
+<h2>Why They're Hated</h2>
+<ul>
+  <li><strong>Retrospective tracking</strong> — "What did I do 3 days ago?" is hard to answer</li>
+  <li><strong>Billing vs reality</strong> — tracking to the 6-minute increment is absurd for knowledge work</li>
+  <li><strong>Punitive culture</strong> — timesheets used for monitoring rather than planning</li>
+</ul>
+<h2>A Better Model</h2>
+<p>Bubely's approach:</p>
+<p>1. <strong>Project-level time budgets</strong> — track at the project level, not the task level</p>
+<p>2. <strong>Daily prompts</strong> — a simple "how many hours on each project today?" (not "what did you do at 10:37 AM?")</p>
+<p>3. <strong>Rounded increments</strong> — 15-minute minimum, not 6-minute</p>
+<p>4. <strong>No approval workflow</strong> — trust-based, with anomaly detection for outliers</p>
+<h2>Results</h2>
+<p>In testing, this reduced time-entry friction by 60% while improving accuracy. People are more honest when they're not being watched at the minute level.</p>
+<p><a href="https://www.researchgate.net/publication/220591216_Time_Sheets_What_Are_They_Good_For" target="_blank">The Timesheet Hell research paper</a> confirms that detailed timesheets actually reduce accuracy because people estimate rather than track.</p>
+<p>The best timesheet system is one people don't hate using.</p>
+
+    </article>
+    <footer>
+      <a href="/portfolio/">Portfolio</a> &middot; &copy; 2026 Amos Bachigale
+    </footer>
+  </div>
+</body>
+</html>

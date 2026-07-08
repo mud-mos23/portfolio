@@ -1,8 +1,170 @@
 [
   {
+    "title": "The Problem with YouTube Music's API (And How yt-dlp Solves It)",
+    "slug": "the-problem-with-youtube-music-s-api-and-how-yt-dlp-solves-i",
+    "date": "2026-07-08",
+    "excerpt": "YouTube Music has no official API for audio streaming. Here's how I built MusicPliz around the limitations."
+  },
+  {
+    "title": "Why Most ERP Implementations Fail (And How to Fix It)",
+    "slug": "why-most-erp-implementations-fail-and-how-to-fix-it",
+    "date": "2026-07-08",
+    "excerpt": "Studies show 55-75% of ERP projects fail to meet their goals. The problem isn't the software — it's how we approach implementation."
+  },
+  {
+    "title": "Why Accountants Should Learn to Code in 2026",
+    "slug": "why-accountants-should-learn-to-code-in-2026",
+    "date": "2026-07-08",
+    "excerpt": "The most valuable accountants in 2026 aren't the ones who know GAAP best. They're the ones who can automate."
+  },
+  {
+    "title": "The State of WebSockets in PHP in 2026",
+    "slug": "the-state-of-websockets-in-php-in-2026",
+    "date": "2026-07-08",
+    "excerpt": "PHP and real-time have always had an awkward relationship. But in 2026, the landscape has shifted significantly."
+  },
+  {
+    "title": "Why Your Startup's Accounting Is a Mess (And How to Fix It)",
+    "slug": "why-your-startup-s-accounting-is-a-mess-and-how-to-fix-it",
+    "date": "2026-07-08",
+    "excerpt": "Every startup has a period where accounting is chaotic. The question is how long you stay there."
+  },
+  {
+    "title": "Security by Obscurity Doesn't Work for ERP Systems",
+    "slug": "security-by-obscurity-doesn-t-work-for-erp-systems",
+    "date": "2026-07-08",
+    "excerpt": "ERP systems hold the crown jewels of any business. Yet most small business ERPs have alarmingly weak security."
+  },
+  {
+    "title": "Why Your REST API Needs Better Error Handling",
+    "slug": "why-your-rest-api-needs-better-error-handling",
+    "date": "2026-07-08",
+    "excerpt": "Poor error handling is the most common API problem I see. It's also the easiest to fix."
+  },
+  {
+    "title": "The Real Cost of Spreadsheets in Enterprise Accounting",
+    "slug": "the-real-cost-of-spreadsheets-in-enterprise-accounting",
+    "date": "2026-07-08",
+    "excerpt": "Spreadsheets cost enterprises millions in hidden errors, audit failures, and wasted labor. Here's the data."
+  },
+  {
+    "title": "The Real Problem with React Native Web",
+    "slug": "the-real-problem-with-react-native-web",
+    "date": "2026-07-08",
+    "excerpt": "React Native Web promises write once, run anywhere. After building MusicPliz, I have thoughts."
+  },
+  {
+    "title": "Python vs JavaScript for Accounting Software: A Developer's Take",
+    "slug": "python-vs-javascript-for-accounting-software-a-developer-s-t",
+    "date": "2026-07-08",
+    "excerpt": "Both languages have strengths, but for accounting and ERP, the choice matters more than most developers think."
+  },
+  {
+    "title": "The Problem with Traditional Timesheets",
+    "slug": "the-problem-with-traditional-timesheets",
+    "date": "2026-07-08",
+    "excerpt": "Timesheets are universally hated. But they don't have to be. Here's a better approach."
+  },
+  {
+    "title": "The Problem with Open Source ERPs (And What Nobody Tells You)",
+    "slug": "the-problem-with-open-source-erps-and-what-nobody-tells-you",
+    "date": "2026-07-08",
+    "excerpt": "Open source ERPs promise freedom but deliver a different kind of lock-in. Here's what I learned from building one."
+  },
+  {
+    "title": "The Problem with Most Budgeting Tools (And What I Built Instead)",
+    "slug": "the-problem-with-most-budgeting-tools-and-what-i-built-inste",
+    "date": "2026-07-08",
+    "excerpt": "Most budgeting tools are either too simple (spreadsheets) or too complex (enterprise FP&A). There's a missing middle."
+  },
+  {
+    "title": "PostgreSQL vs SQLite for ERP: When Simple Is Better",
+    "slug": "postgresql-vs-sqlite-for-erp-when-simple-is-better",
+    "date": "2026-07-08",
+    "excerpt": "PostgreSQL is the default choice for ERP. But SQLite deserves a closer look, especially for small and medium businesses."
+  },
+  {
+    "title": "The Problem with Modern Design Tools (And Why I Built Nstup Taste)",
+    "slug": "the-problem-with-modern-design-tools-and-why-i-built-nstup-t",
+    "date": "2026-07-08",
+    "excerpt": "Every AI design tool generates the same purple-blue SaaS template. I built something different."
+  },
+  {
+    "title": "Machine Learning for Auditing: Where It Works and Where It Doesn't",
+    "slug": "machine-learning-for-auditing-where-it-works-and-where-it-do",
+    "date": "2026-07-08",
+    "excerpt": "Big Four firms all claim AI-powered auditing. But the reality of ML in audit is more limited than the marketing suggests."
+  },
+  {
+    "title": "Isolation Forest for Fraud Detection: Is It Actually Useful?",
+    "slug": "isolation-forest-for-fraud-detection-is-it-actually-useful",
+    "date": "2026-07-08",
+    "excerpt": "Isolation Forest is trendy in fraud detection tutorials. Does it hold up in real accounting data? I tested it."
+  },
+  {
     "title": "Building MusicPliz — A YouTube Music Player for the Web",
     "slug": "building-musicpliz-a-youtube-music-player-for-the-web",
     "date": "2026-07-07",
     "excerpt": "How I built a web-based YouTube Music player with React Native, a Spotify-inspired UI, and yt-dlp audio streaming."
+  },
+  {
+    "title": "The Problem with Financial Ratios: What ROE Doesn't Tell You",
+    "slug": "the-problem-with-financial-ratios-what-roe-doesn-t-tell-you",
+    "date": "2026-07-08",
+    "excerpt": "ROE is the most-watched financial metric. It's also one of the most misleading when viewed in isolation."
+  },
+  {
+    "title": "Why Financial Dashboards Are Useless Without Context",
+    "slug": "why-financial-dashboards-are-useless-without-context",
+    "date": "2026-07-08",
+    "excerpt": "A dashboard without context isn't a dashboard — it's a screensaver. Here's what most financial tools get wrong."
+  },
+  {
+    "title": "ERP Data Migration: The Step Everyone Skips",
+    "slug": "erp-data-migration-the-step-everyone-skips",
+    "date": "2026-07-08",
+    "excerpt": "Data migration is the most common cause of ERP project delays. Here's a strategy that works."
+  },
+  {
+    "title": "Django vs Flask for ERP Systems: My Experience After Building Both",
+    "slug": "django-vs-flask-for-erp-systems-my-experience-after-building",
+    "date": "2026-07-08",
+    "excerpt": "I've built business applications in both frameworks. For ERP, the choice is clearer than most developers think."
+  },
+  {
+    "title": "The Real Problem with Chatbots in ERP Systems",
+    "slug": "the-real-problem-with-chatbots-in-erp-systems",
+    "date": "2026-07-08",
+    "excerpt": "Every ERP vendor is adding a chatbot. Most are useless. Here's why — and what would actually help."
+  },
+  {
+    "title": "Cash Flow vs Profit: Why Profitable Companies Still Fail",
+    "slug": "cash-flow-vs-profit-why-profitable-companies-still-fail",
+    "date": "2026-07-08",
+    "excerpt": "Profit is an opinion. Cash is a fact. Here's why companies with great P&Ls still go bankrupt."
+  },
+  {
+    "title": "Building Real-Time Apps Without a Framework",
+    "slug": "building-real-time-apps-without-a-framework",
+    "date": "2026-07-08",
+    "excerpt": "You don't always need a framework for real-time features. Sometimes raw WebSockets are cleaner."
+  },
+  {
+    "title": "AI in Accounting: Hype vs Reality in 2026",
+    "slug": "ai-in-accounting-hype-vs-reality-in-2026",
+    "date": "2026-07-08",
+    "excerpt": "Everyone promises AI will revolutionize accounting. The reality is more nuanced — and more interesting."
+  },
+  {
+    "title": "The Accounting Equation Is Not Just Theory — It's Code",
+    "slug": "the-accounting-equation-is-not-just-theory-it-s-code",
+    "date": "2026-07-08",
+    "excerpt": "Assets = Liabilities + Equity isn't just an accounting principle. It's the foundation of every financial application you'll ever build."
+  },
+  {
+    "title": "Why You Should Care About the Accounting Equation as a Developer",
+    "slug": "why-you-should-care-about-the-accounting-equation-as-a-devel",
+    "date": "2026-07-08",
+    "excerpt": "The accounting equation isn't just for accountants. It's the most elegant data integrity constraint you'll ever encounter."
   }
 ]

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Learning for Auditing: Where It Works and Where It Doesn't · Amos Bachigale</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✍️</text></svg>">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #ffffff; --surface: #f5f5f5; --border: #e0e0e0;
+      --accent: #1DB954; --accent-dim: rgba(29,185,84,0.08);
+      --text: #111111; --text2: #555555; --text3: #999999;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font); background: var(--bg); color: var(--text);
+      line-height: 1.7; -webkit-font-smoothing: antialiased; padding: 0;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    nav {
+      padding: 24px 0 48px;
+    }
+    nav a {
+      color: var(--text2); text-decoration: none; font-size: 14px;
+      display: inline-flex; align-items: center; gap: 6px; transition: color 0.2s;
+    }
+    nav a:hover { color: var(--text); }
+
+    article { padding-bottom: 80px; }
+    article h1 { font-size: 32px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; letter-spacing: -0.5px; }
+    article .meta { color: var(--text3); font-size: 13px; margin-bottom: 48px; }
+    article h2 { font-size: 22px; font-weight: 700; margin: 40px 0 16px; }
+    article h3 { font-size: 18px; font-weight: 600; margin: 32px 0 12px; }
+    article p { color: var(--text2); font-size: 16px; margin-bottom: 20px; }
+    article a { color: var(--accent); }
+    article blockquote {
+      border-left: 3px solid var(--accent); padding: 12px 20px;
+      margin: 24px 0; background: var(--accent-dim); border-radius: 4px;
+      color: var(--text2); font-style: italic;
+    }
+    article ul, article ol { margin: 16px 0 24px; padding-left: 24px; color: var(--text2); }
+    article li { margin-bottom: 8px; }
+    article pre {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 20px; overflow-x: auto;
+      margin: 24px 0; font-size: 14px; line-height: 1.5;
+    }
+    article code { font-family: 'SF Mono', Monaco, monospace; }
+    article :not(pre) > code {
+      background: var(--accent-dim); color: var(--accent);
+      padding: 2px 8px; border-radius: 4px; font-size: 14px;
+    }
+    article hr { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 24px 0;
+      text-align: center; font-size: 13px; color: var(--text3);
+    }
+    footer a { color: var(--text2); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    @media (max-width: 600px) {
+      article h1 { font-size: 26px; }
+      nav { padding: 16px 0 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="/portfolio/blog/">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to blog
+      </a>
+    </nav>
+    <article>
+      <h1>Machine Learning for Auditing: Where It Works and Where It Doesn't</h1>
+      <div class="meta">2026-07-08</div>
+      <p>I built two audit-adjacent tools: <a href="https://github.com/mud-mos23/fraud-detection" target="_blank">FraudShield</a> (fraud detection) and <a href="https://github.com/mud-mos23/audit-automatique" target="_blank">AuditFlow</a> (automatic audit). Combined, they taught me where ML adds value in auditing — and where it doesn't.</p>
+<h2>Where ML Works</h2>
+<p>1. <strong>Transaction-level anomaly detection</strong> — Isolation Forest on journal entries catches outliers humans miss</p>
+<p>2. <strong>Duplicate detection</strong> — MD5 hashing across multiple fields catches near-duplicates</p>
+<p>3. <strong>Stratified sampling</strong> — ML can optimize sample selection for substantive testing</p>
+<h2>Where ML Doesn't Work</h2>
+<p>1. <strong>Control testing</strong> — evaluating whether a control is well-designed requires judgment</p>
+<p>2. <strong>Estimation accuracy</strong> — ML can't determine if a warranty provision is adequate</p>
+<p>3. <strong>Fraud motivation</strong> — ML sees patterns, not intent</p>
+<h2>The Right Mix</h2>
+<p><a href="https://github.com/mud-mos23/audit-automatique" target="_blank">AuditFlow</a> uses deterministic rules (PCG compliance, equation balancing, class coherence) rather than ML, because audit rules are known and shouldn't be probabilistic.</p>
+<p><a href="https://github.com/mud-mos23/fraud-detection" target="_blank">FraudShield</a> uses ML because fraud patterns are unknown and evolving.</p>
+<p>The rule: if you can write a deterministic check, don't use ML. Reserve ML for cases where the "normal" pattern is unknown or changing.</p>
+<p>The <a href="https://www.theiia.org/en/content/position-papers/2022/artificial-intelligence-in-internal-audit/" target="_blank">IIA's position paper on AI in auditing</a> reaches similar conclusions.</p>
+
+    </article>
+    <footer>
+      <a href="/portfolio/">Portfolio</a> &middot; &copy; 2026 Amos Bachigale
+    </footer>
+  </div>
+</body>
+</html>
