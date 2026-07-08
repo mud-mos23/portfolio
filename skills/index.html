@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amos Bachigale | Portfolio</title>
+  <title>Skills · Amos Bachigale</title>
   <link rel="icon" type="image/png" href="/portfolio/assets/photo-32.png">
-  <style>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -52,7 +52,6 @@
       transition: color 0.2s;
     }
     nav .links a:hover { color: var(--text); }
-    nav .links a.active { color: var(--accent); font-weight: 600; }
 
     /* HERO */
     .hero {
@@ -85,7 +84,7 @@
     .btn-outline:hover { border-color: var(--text2); background: var(--surface); }
 
     /* SECTIONS */
-    section, .page-section { padding: 100px 0; }
+    section { padding: 100px 0; }
     .section-label {
       color: var(--accent); font-size: 12px; font-weight: 600;
       letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
@@ -206,7 +205,7 @@
       </a>
       <div class="links">
         <a href="/portfolio/about/">About</a>
-        <a href="/portfolio/skills/">Skills</a>
+        <a href="/portfolio/skills/" class='active'>Skills</a>
         <a href="/portfolio/projects/">Projects</a>
         <a href="/portfolio/blog/">Blog</a>
         <a href="/portfolio/#contact">Contact</a>
@@ -214,47 +213,23 @@
     </div>
   </nav>
 
-  <section class="hero" id="home">
+  <section class="page-section" id="skills">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-greeting">Hello, I'm</div>
-        <h1>Amos <span>Bachigale</span></h1>
-        <p>Full-stack developer building real products — ERP systems with Django, ML fraud detection with Scikit-learn, music streaming with React Native, and financial analysis tools. I write about code, design, accounting, and building things that matter.</p>
-        <div class="hero-cta">
-          <a href="/portfolio/projects/" class="btn btn-primary">View Projects</a>
-          <a href="/portfolio/blog/" class="btn btn-outline">Read Blog</a>
-        </div>
-      </div>
-      <img src="/portfolio/assets/photo.png" alt="Amos Bachigale" class="hero-photo">
-    </div>
-  </section>
-
-  <section id="blog">
-    <div class="container">
-      <div class="section-label">Blog</div>
-      <h2 class="section-title">Latest posts</h2>
-      <div class="blog-grid" id="blog-posts">
-        <p style="color:var(--text3);font-size:14px;">Loading posts...</p>
-      </div>
-      <div style="margin-top:32px;text-align:center;">
-        <a href="/portfolio/blog/" class="btn btn-outline">View all posts</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Get in touch</h2>
-      <div class="contact-links">
-        <a href="https://github.com/mud-mos23" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          mud-mos23
-        </a>
-        <a href="mailto:amosmude6@gmail.com">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          amosmude6@gmail.com
-        </a>
+      <div class="section-label">Skills</div>
+      <h2 class="section-title">What I use</h2>
+      <div class="skills-grid">
+        <div class="skill-chip">TypeScript</div>
+        <div class="skill-chip">JavaScript</div>
+        <div class="skill-chip">React Native</div>
+        <div class="skill-chip">Python</div>
+        <div class="skill-chip">PHP</div>
+        <div class="skill-chip">Flask</div>
+        <div class="skill-chip">React</div>
+        <div class="skill-chip">Node.js</div>
+        <div class="skill-chip">WebSockets</div>
+        <div class="skill-chip">HTML/CSS</div>
+        <div class="skill-chip">Expo</div>
+        <div class="skill-chip">Git</div>
       </div>
     </div>
   </section>
@@ -262,30 +237,8 @@
   <footer>
     <div class="container">
       <span>&copy; 2026 Amos Bachigale</span>
-      <a href="/portfolio/#home">Back to top</a>
+      <a href="/portfolio/">Home</a>
     </div>
   </footer>
-
-  <script>
-    fetch('/portfolio/blog/index.json')
-      .then(r => r.json())
-      .then(posts => {
-        const container = document.getElementById('blog-posts');
-        container.innerHTML = posts.slice(0, 3).map(post => `
-          <a href="/portfolio/blog/${post.slug}/" class="blog-card">
-            <div class="date">${post.date}</div>
-            <h3>${post.title}</h3>
-            <p>${post.excerpt}</p>
-            <span class="read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-        `).join('');
-      })
-      .catch(() => {
-        document.getElementById('blog-posts').innerHTML = '<p style="color:var(--text3);font-size:14px;">No posts yet — check back soon.</p>';
-      });
-  </script>
 </body>
 </html>

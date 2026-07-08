@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amos Bachigale | Portfolio</title>
+  <title>Projects · Amos Bachigale</title>
   <link rel="icon" type="image/png" href="/portfolio/assets/photo-32.png">
-  <style>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
@@ -52,7 +52,6 @@
       transition: color 0.2s;
     }
     nav .links a:hover { color: var(--text); }
-    nav .links a.active { color: var(--accent); font-weight: 600; }
 
     /* HERO */
     .hero {
@@ -85,7 +84,7 @@
     .btn-outline:hover { border-color: var(--text2); background: var(--surface); }
 
     /* SECTIONS */
-    section, .page-section { padding: 100px 0; }
+    section { padding: 100px 0; }
     .section-label {
       color: var(--accent); font-size: 12px; font-weight: 600;
       letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;
@@ -207,54 +206,145 @@
       <div class="links">
         <a href="/portfolio/about/">About</a>
         <a href="/portfolio/skills/">Skills</a>
-        <a href="/portfolio/projects/">Projects</a>
+        <a href="/portfolio/projects/" class='active'>Projects</a>
         <a href="/portfolio/blog/">Blog</a>
         <a href="/portfolio/#contact">Contact</a>
       </div>
     </div>
   </nav>
 
-  <section class="hero" id="home">
+  <section class="page-section" id="projects">
     <div class="container">
-      <div class="hero-content">
-        <div class="hero-greeting">Hello, I'm</div>
-        <h1>Amos <span>Bachigale</span></h1>
-        <p>Full-stack developer building real products — ERP systems with Django, ML fraud detection with Scikit-learn, music streaming with React Native, and financial analysis tools. I write about code, design, accounting, and building things that matter.</p>
-        <div class="hero-cta">
-          <a href="/portfolio/projects/" class="btn btn-primary">View Projects</a>
-          <a href="/portfolio/blog/" class="btn btn-outline">Read Blog</a>
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>MusicPliz</h3>
+          <p>A React Native music player for the web with real YouTube Music streaming. Features a Spotify-inspired UI, search, library management, and audio playback via yt-dlp integration.</p>
+          <div class="project-meta">
+            <span>TypeScript</span>
+            <span>React Native</span>
+            <span>YouTube API</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/musicpliz" target="_blank">Source</a>
+            <a href="https://mud-mos23.github.io/musicpliz" target="_blank">Live Demo</a>
+          </div>
         </div>
-      </div>
-      <img src="/portfolio/assets/photo.png" alt="Amos Bachigale" class="hero-photo">
-    </div>
-  </section>
 
-  <section id="blog">
-    <div class="container">
-      <div class="section-label">Blog</div>
-      <h2 class="section-title">Latest posts</h2>
-      <div class="blog-grid" id="blog-posts">
-        <p style="color:var(--text3);font-size:14px;">Loading posts...</p>
-      </div>
-      <div style="margin-top:32px;text-align:center;">
-        <a href="/portfolio/blog/" class="btn btn-outline">View all posts</a>
-      </div>
-    </div>
-  </section>
+        <div class="project-card">
+          <h3>Nstup Taste</h3>
+          <p>An anti-slop design system for AI-generated interfaces. No generic SaaS templates, no purple-blue gradients, no 3-column card layouts. Opinionated, tasteful defaults for real design.</p>
+          <div class="project-meta">
+            <span>Shell</span>
+            <span>Design System</span>
+            <span>CSS</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/nstup-taste" target="_blank">Source</a>
+          </div>
+        </div>
 
-  <section id="contact">
-    <div class="container">
-      <div class="section-label">Contact</div>
-      <h2 class="section-title">Get in touch</h2>
-      <div class="contact-links">
-        <a href="https://github.com/mud-mos23" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          mud-mos23
-        </a>
-        <a href="mailto:amosmude6@gmail.com">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          amosmude6@gmail.com
-        </a>
+        <div class="project-card">
+          <h3>Agency Balthazar</h3>
+          <p>A money transfer management application built for Ets Balthazar agency. Handles transaction tracking, client management, and reporting.</p>
+          <div class="project-meta">
+            <span>HTML</span>
+            <span>JavaScript</span>
+            <span>Finance</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/agencyBalth" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Data Analyzer</h3>
+          <p>A statistical analysis web application built with Flask (Python). Provides data visualization and analytical tools through a clean web interface. Deployed on Render.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Flask</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/Data-Analyzer" target="_blank">Source</a>
+            <a href="https://data-analyzer-lzo7.onrender.com/" target="_blank">Live Demo</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>Real-Time PHP</h3>
+          <p>A PHP package for building real-time applications with WebSockets. Enables bidirectional communication and live updates in PHP-based projects.</p>
+          <div class="project-meta">
+            <span>PHP</span>
+            <span>WebSockets</span>
+            <span>Composer</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/real-time-php" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <h3>FinDash — Financial Dashboard</h3>
+          <p>Interactive financial analysis tool built with Streamlit. Imports statements from Yahoo Finance and computes ROE, ROA, EBITDA, liquidity ratios, and more with visual alerts.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Streamlit</span>
+            <span>Plotly</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/financial-dashboard" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-screenshots">
+            <img src="/portfolio/assets/screenshots/fraud-01-overview.png" alt="FraudShield overview">
+          </div>
+          <h3>FraudShield — Fraud Detection</h3>
+          <p>ML-powered accounting fraud detection using Isolation Forest. Detects anomalies, duplicates, round amounts, suspicious descriptions, and after-hours transactions from CSV data.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>Streamlit</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/fraud-detection" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-screenshots">
+            <img src="/portfolio/assets/screenshots/audit-01-overview.png" alt="AuditFlow overview">
+          </div>
+          <h3>AuditFlow — Audit Automatique</h3>
+          <p>Automatic accounting audit engine based on French PCG rules. Checks equation balancing, class coherence, negative assets, missing accounts, and produces a compliance score.</p>
+          <div class="project-meta">
+            <span>Python</span>
+            <span>Streamlit</span>
+            <span>PCG Rules</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/audit-automatique" target="_blank">Source</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-screenshots">
+            <img src="/portfolio/assets/screenshots/bubely-02-accounting.png" alt="Bubely ERP accounting">
+          </div>
+          <h3>Bubely ERP</h3>
+          <p>Full enterprise resource planning system with 12 integrated modules: accounting, finance, HR, inventory, purchasing, sales, CRM, assets, projects, reports, dashboard, and AI anomaly detection.</p>
+          <div class="project-meta">
+            <span>Django 6</span>
+            <span>Bootstrap 5</span>
+            <span>Chart.js</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/mud-mos23/bubely-erp" target="_blank">Source</a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -262,30 +352,8 @@
   <footer>
     <div class="container">
       <span>&copy; 2026 Amos Bachigale</span>
-      <a href="/portfolio/#home">Back to top</a>
+      <a href="/portfolio/">Home</a>
     </div>
   </footer>
-
-  <script>
-    fetch('/portfolio/blog/index.json')
-      .then(r => r.json())
-      .then(posts => {
-        const container = document.getElementById('blog-posts');
-        container.innerHTML = posts.slice(0, 3).map(post => `
-          <a href="/portfolio/blog/${post.slug}/" class="blog-card">
-            <div class="date">${post.date}</div>
-            <h3>${post.title}</h3>
-            <p>${post.excerpt}</p>
-            <span class="read-more">
-              Read more
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
-        `).join('');
-      })
-      .catch(() => {
-        document.getElementById('blog-posts').innerHTML = '<p style="color:var(--text3);font-size:14px;">No posts yet — check back soon.</p>';
-      });
-  </script>
 </body>
 </html>
