@@ -112,7 +112,9 @@
       border-radius: 50px; padding: 10px 20px;
       font-size: 14px; color: var(--text2); text-align: center;
       transition: all 0.2s;
+      display: inline-flex; align-items: center; gap: 8px; justify-content: center;
     }
+    .skill-chip svg { flex-shrink: 0; }
     .skill-chip:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
 
     /* PROJECTS */
@@ -220,18 +222,24 @@
       <div class="section-label">Skills</div>
       <h2 class="section-title">What I use</h2>
       <div class="skills-grid">
-        <div class="skill-chip">TypeScript</div>
-        <div class="skill-chip">JavaScript</div>
-        <div class="skill-chip">React Native</div>
-        <div class="skill-chip">Python</div>
-        <div class="skill-chip">PHP</div>
-        <div class="skill-chip">Flask</div>
-        <div class="skill-chip">React</div>
-        <div class="skill-chip">Node.js</div>
-        <div class="skill-chip">WebSockets</div>
-        <div class="skill-chip">HTML/CSS</div>
-        <div class="skill-chip">Expo</div>
-        <div class="skill-chip">Git</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#3178C6"><rect width="24" height="24" rx="3"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="14" font-weight="bold">TS</text></svg> TypeScript</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#F7DF1E"><rect width="24" height="24" rx="3"/><text x="12" y="17" text-anchor="middle" fill="black" font-size="14" font-weight="bold">JS</text></svg> JavaScript</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#61DAFB"><circle cx="12" cy="12" r="3" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(-60 12 12)"/></svg> React Native</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5z" fill="#3776AB"/><path d="M12 2v20l10-5V7l-10-5z" fill="#FFD43B"/></svg> Python</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#777BB3"><ellipse cx="12" cy="12" rx="9" ry="5" fill="#777BB3"/><text x="12" y="15" text-anchor="middle" fill="white" font-size="10" font-weight="bold">PHP</text></svg> PHP</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#666"><path d="M9 2h6l1 5H8l1-5z" fill="#999"/><path d="M4 8h16l-1 9H5l-1-9z" fill="#bbb"/><path d="M6 12h12" stroke="#999" stroke-width="1.5"/></svg> Flask</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#61DAFB"><circle cx="12" cy="12" r="3" fill="none" stroke="#61DAFB" stroke-width="1.5"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3" fill="none" stroke="#61DAFB" stroke-width="1" transform="rotate(-60 12 12)"/></svg> React</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#339933"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Node.js</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#666"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="none" stroke="#666" stroke-width="1.5"/><path d="M7 12l3 3 7-7" stroke="#00BCD4" stroke-width="2" fill="none"/></svg> WebSockets</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#E34F26"><rect width="24" height="24" rx="3" fill="#E34F26"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="10" font-weight="bold">H5</text></svg> HTML/CSS</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16"><rect width="24" height="24" rx="3" fill="white" stroke="#666" stroke-width="1"/><text x="12" y="17" text-anchor="middle" fill="#666" font-size="9" font-weight="bold">EX</text></svg> Expo</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#F05032"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg> Git</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16"><rect width="24" height="24" rx="3" fill="#0FAAFF"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="8" font-weight="bold">SAP</text></svg> SAP</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#4285F4"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="none" stroke="#4285F4" stroke-width="1.5"/><path d="M7 15h10l-3-6H10l-3 6z" fill="#4285F4" opacity="0.3"/></svg> Cloud</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#F80000"><rect width="24" height="24" rx="3" fill="#F80000"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="7" font-weight="bold">ORA</text></svg> Oracle Code</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#F2C811"><rect x="3" y="12" width="4" height="6" rx="1" fill="#F2C811"/><rect x="10" y="8" width="4" height="10" rx="1" fill="#F2C811"/><rect x="17" y="4" width="4" height="14" rx="1" fill="#F2C811"/></svg> BI</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16"><rect width="24" height="24" rx="3" fill="#D83B01"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="7" font-weight="bold">OFF</text></svg> Microsoft Office</div>
+        <div class="skill-chip"><svg viewBox="0 0 24 24" width="16" height="16" fill="#00A4EF"><circle cx="12" cy="12" r="9" fill="none" stroke="#00A4EF" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="#00A4EF" stroke-width="2" fill="none"/><path d="M18 12a6 6 0 11-12 0 6 6 0 0112 0z" fill="#00A4EF" opacity="0.15"/></svg> Collect 360</div>
       </div>
     </div>
   </section>
