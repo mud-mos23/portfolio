@@ -108,6 +108,16 @@
     }
     .section-title { font-size: clamp(28px, 4vw, 36px); font-weight: 700; margin-bottom: 48px; letter-spacing: -0.5px; }
 
+    /* INTERESTS */
+    .interests-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .interest-tag {
+      display: inline-block; padding: 8px 18px; border-radius: 50px;
+      font-size: 13px; font-weight: 500; color: var(--accent);
+      background: var(--accent-dim); border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+    .interest-tag:hover { border-color: var(--accent); transform: translateY(-2px); }
+
     /* ABOUT */
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
     .about-text p { color: var(--text2); font-size: 15px; margin-bottom: 16px; }
@@ -262,6 +272,33 @@
       <span style="top:60%;left:68%;animation-delay:3.2s;"><svg viewBox="0 0 24 24" width="12" height="12" fill="#F80000"><rect width="24" height="24" rx="3" fill="#F80000"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="7" font-weight="bold">ORA</text></svg>Oracle Code</span>
       <span style="top:80%;left:73%;animation-delay:1.8s;"><svg viewBox="0 0 24 24" width="12" height="12" fill="#F2C811"><rect x="3" y="12" width="4" height="6" rx="1"/><rect x="10" y="8" width="4" height="10" rx="1"/><rect x="17" y="4" width="4" height="14" rx="1"/></svg>BI</span>
       <span style="top:50%;left:90%;animation-delay:2.2s;"><svg viewBox="0 0 24 24" width="12" height="12"><rect width="24" height="24" rx="3" fill="#D83B01"/><text x="12" y="17" text-anchor="middle" fill="white" font-size="7" font-weight="bold">OFF</text></svg>MS Office</span>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="container">
+      <div class="section-label">Focus</div>
+      <h2 class="section-title">Domaines d'intérêts</h2>
+      <div class="interests-grid">
+        <span class="interest-tag">#Music</span>
+        <span class="interest-tag">#Streaming</span>
+        <span class="interest-tag">#Design</span>
+        <span class="interest-tag">#Finance</span>
+        <span class="interest-tag">#Data</span>
+        <span class="interest-tag">#WebSockets</span>
+        <span class="interest-tag">#RealTime</span>
+        <span class="interest-tag">#MachineLearning</span>
+        <span class="interest-tag">#FraudDetection</span>
+        <span class="interest-tag">#Audit</span>
+        <span class="interest-tag">#Accounting</span>
+        <span class="interest-tag">#ERP</span>
+        <span class="interest-tag">#CRM</span>
+        <span class="interest-tag">#HR</span>
+        <span class="interest-tag">#Inventory</span>
+        <span class="interest-tag">#BI</span>
+        <span class="interest-tag">#Cloud</span>
+        <span class="interest-tag">#Security</span>
+      </div>
     </div>
   </section>
 
